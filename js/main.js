@@ -1,3 +1,5 @@
+window.bootstrap = require('../node_modules/bootstrap/dist/js/bootstrap.bundle.js');
+
 // ****
 // Navbar items now collapse navbar when open
 // https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-navbar-on-click
