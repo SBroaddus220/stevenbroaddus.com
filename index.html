@@ -18,7 +18,7 @@
   <header>
 
     <!-- navbar -->
-    <nav id="main-nav" class="navbar navbar-expand-sm bg-light position-fixed vw-100" style="z-index: 1;">
+    <nav id="main-nav" class="navbar navbar-expand-sm bg-light position-fixed vw-100 border-1 border-bottom border-light" style="z-index: 1;">
       <div class="container-fluid border-3">
 
         <!-- name navbar item (leads to home) -->
@@ -73,12 +73,15 @@
   <body data-bs-spy="scroll" data-bs-target="#main-nav" tabindex="0">
 
     <section id="home">
-      <!-- welcome section with image background -->
-      <div class="container-fluid d-flex p-0 vh-100 w-100 align-items-center justify-content-center">
+      <!-- Particle.js background -->
+      <div id="particles-js"></div>
+
+      <!-- welcome section content -->
+      <div class="container-fluid d-flex p-0 vh-100 w-100 align-items-center justify-content-center" id="home-content">
         <!-- name and brief introduction -->
-        <div class="home-text">
-          <h1 class="display-1 fw-semibold font-monospace">Steven Broaddus</h1>
-          <h3 class="mb-3">Computer Engineer | Student | Developer</h3>
+        <div style="z-index: 10;">
+          <h1 class="display-1 fw-semibold font-monospace" style="color:rgb(200, 200, 200);">Steven Broaddus</h1>
+          <h3 class="mb-3" style="color:rgb(200, 200, 200)">Computer Engineer | Student | Developer</h3>
 
           <!-- social media links -->
           <a href="mailto:steven.broaddus220@gmail.com" id="icon-link"><i class="bi bi-envelope px-3" style="font-size: 2rem;"></i></a>
@@ -440,6 +443,11 @@
     <!-- Custom js scripts -->
     <script src="./js/main.js"></script>
 
+    <!-- Particle.js Background -->
+    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src="./js/particlesbg.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   </body>
 
   <footer>

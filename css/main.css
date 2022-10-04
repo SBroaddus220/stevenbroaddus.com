@@ -20,19 +20,19 @@ hr {
 
 /* Defines styles for links in icons */
 #icon-link:link {
-    color: gray;
+    color: rgb(175, 175, 175);
 }
 
 #icon-link:visited {
-    color: gray;
+    color: rgb(175, 175, 175);
 }
 
 #icon-link:hover {
-    color: rgb(85, 85, 85); /* darker gray */
+    color: rgb(150, 150, 150); /* darker gray */
 }
 
 #icon-link:active {
-    color: black;
+    color: rgb(100, 100, 100);
 }
 
 /* Adds simple box shadow to hr */
@@ -81,18 +81,47 @@ hr.section-hr {
 /************/
 /* Home / Navigation */
 .header {
-    z-index: 1;
+    z-index: 5000;
+    position: relative;
 }
 
 #home { /* welcome banner */
-    background-image: url("https://via.placeholder.com/1000x650");
-    background-size: cover;
+    background: linear-gradient(-45deg, #252425,#7b7a8a, #3e4450, #34425a);
+    background-size: 400% 400%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: top;
     background-attachment: fixed;
     text-align: center;
+    z-index: 0;
     vertical-align: middle;
+    animation: gradient 15s ease infinite;
+    position: relative;
+}
+
+#home-content {
+    position: relative;
+}
+
+/* Particle background */
+#particles-js {
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+  }
+
+/* Gradient for welcome background */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 /************/
