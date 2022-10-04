@@ -1,0 +1,208 @@
+/***********************************************************
+ * 
+ *        CSS Styles for stevenbroaddus.com
+ *            By Steven Broaddus 2022
+ *          
+ */
+
+/********************************************/
+/* Default Styles & Custom classes/IDs */
+
+hr {
+    margin: 0 auto;
+}
+
+#centered-half-hr {
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+
+/* Defines styles for links in icons */
+#icon-link:link {
+    color: gray;
+}
+
+#icon-link:visited {
+    color: gray;
+}
+
+#icon-link:hover {
+    color: rgb(85, 85, 85); /* darker gray */
+}
+
+#icon-link:active {
+    color: black;
+}
+
+/* Adds simple box shadow to hr */
+hr.section-hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(255, 255, 255, 0.5);
+}
+
+/************/
+/* Bootstrap Default Styles*/
+
+.rounded-circle {
+    border:1px solid;
+    border-radius:50%;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    text-align: center;
+}
+
+.tooltip-light-bg {
+    --bs-tooltip-bg: var(--bs-light);
+    --bs-tooltip-color: black;
+}
+
+/* Card styles */
+.card {
+    transition: .5s;
+}
+
+.card:hover {
+    transform:scale(1.1);
+    transition: .5s;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+
+/********************************************/
+/* Sections */
+
+/************/
+/* Home / Navigation */
+.header {
+    z-index: 1;
+}
+
+#home { /* welcome banner */
+    background-image: url("https://via.placeholder.com/1000x650");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-attachment: fixed;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/************/
+/* About */
+
+#about > * {
+    color: white;
+}
+
+/************/
+/* Education */
+
+#education > * {
+    color: white;
+}
+
+/************/
+/* Experience */
+
+.experience-timeline {
+    border-left: 1px solid hsl(0, 0%, 85%);
+    position: relative;
+    list-style: none;
+}
+
+.experience-timeline .timeline-item {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.experience-timeline .timeline-item:after {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.experience-timeline .timeline-item:after {
+    background-color: hsl(0, 0%, 75%);
+    left: -40px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    content: "";
+}
+
+/************/
+/* Projects */
+
+/************/
+/* Contact */
+
+/*********************************************************/
+/* Responsive styles */
+/* Uses same width breakpoints as bootstrap */
+
+@media only screen and (min-width: 726px) { /* md breakpoint */        
+    #about-skills {
+        border-left: 1px solid gray;
+    }
+
+    #about-skills-list {
+        list-style-type: none;
+        padding-left: 0%;
+    }
+
+    #osu-logo {
+        width: 10rem;
+        height: 10rem;
+        border: white;
+        border-right: 2px;
+    }
+
+    #experiences {
+        width: 50%;
+    }
+
+    #contact-row {
+        margin: 5rem 0 5rem 0;
+    }
+}
+
+@media only screen and (max-width: 726px) { /* md breakpoint */
+    
+    /* lets lists be centered without markers on small viewports */
+    #about-interests-list {
+        list-style-type: none;
+        padding-left: 0%;
+    }
+    
+    #about-skills-list {
+        list-style-type: none;
+        padding-left: 0%;
+    }
+
+    #about-skills-list ul {
+        list-style-type: none;
+        padding-left: 0%;
+        color: gray;
+    }
+
+    #osu-logo {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #experiences {
+        width: 75%;
+    }
+
+    #contact-row {
+        margin: 1rem 0 1rem 0;
+    }
+}
