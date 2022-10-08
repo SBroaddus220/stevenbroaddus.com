@@ -87,7 +87,7 @@ hr.section-hr {
 
 #home { /* welcome banner */
     background: linear-gradient(-45deg, #252425,#7b7a8a, #3e4450, #34425a);
-    background-size: 400% 400%;
+    background-size: 200% 200%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: top;
@@ -95,7 +95,7 @@ hr.section-hr {
     text-align: center;
     z-index: 0;
     vertical-align: middle;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
     position: relative;
 }
 
@@ -124,6 +124,11 @@ hr.section-hr {
 	}
 }
 
+#main-nav {
+    top: 0;
+    transition: top 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
 /************/
 /* About */
 
@@ -136,6 +141,15 @@ hr.section-hr {
 
 #education > * {
     color: white;
+}
+
+#collapse-osu-coursework .card {
+    transition: .5s;
+}
+
+#collapse-osu-coursework .card:hover {
+    transform:scale(1.1);
+    transition: .5s;
 }
 
 /************/
@@ -169,6 +183,21 @@ hr.section-hr {
 
 /************/
 /* Projects */
+
+#project-cards .card {
+    transition: .5s;
+}
+
+#project-cards .card:hover {
+    transform:scale(1.1);
+    transition: .5s;
+}
+
+#project-cards .card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
 
 /************/
 /* Contact */

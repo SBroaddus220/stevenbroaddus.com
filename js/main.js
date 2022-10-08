@@ -1,6 +1,40 @@
+
+// ****
+// Navbar styles
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+
+    var currentScrollPos = window.pageYOffset;
+
+    // Hides navbar
+    if (currentScrollPos > (window.innerHeight * 0.70)) {
+
+        // Checks if window is being scrolled down. Hides navbar if yes.
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("main-nav").style.top = "0";
+        } else {
+            document.getElementById("main-nav").style.top = "-70px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+    
+    // Toggles transparency of navbar
+    if (currentScrollPos > (window.innerHeight * 0.8)) {
+        // Navbar is transparent if more than 75% of window height hasn't been scrolled through yet.
+        if (document.getElementById("main-nav").classList.contains("bg-transparent")) {
+            document.getElementById("main-nav").classList.remove("bg-transparent");
+        }
+    } else {
+        // Navbar is transparent if more than 75% of window height hasn't been scrolled through yet.
+        if (!document.getElementById("main-nav").classList.contains("bg-transparent")) {
+            document.getElementById("main-nav").classList.add("bg-transparent");
+        }
+    }
+    
+}
+
 // ****
 // Coursework data
-
 let template = {"<>":"div","class":"card col-md-3 col-12 my-3 mx-3","style":"border-width: 0 0 0 0.5rem; border-color: ${color};","html":[
                     {"<>":"div","class":"card-header fw-semibold","html":[
                         {"<>":"p","class":"text-black text-start my-0","style":"font-size: medium;","html":"${title}"}

@@ -18,7 +18,7 @@
   <header>
 
     <!-- navbar -->
-    <nav id="main-nav" class="navbar navbar-expand-sm bg-light position-fixed vw-100 border-1 border-bottom border-light" style="z-index: 1;">
+    <nav id="main-nav" class="navbar navbar-expand-sm bg-light position-fixed vw-100 bg-transparent" style="z-index: 1;">
       <div class="container-fluid border-3">
 
         <!-- name navbar item (leads to home) -->
@@ -77,17 +77,17 @@
       <div id="particles-js"></div>
 
       <!-- welcome section content -->
-      <div class="container-fluid d-flex p-0 vh-100 w-100 align-items-center justify-content-center" id="home-content">
+      <div class="container-fluid d-flex flex-column p-0 vh-100 w-100 align-items-center justify-content-center" id="home-content">
         <!-- name and brief introduction -->
-        <div style="z-index: 10;">
+        <div>
           <h1 class="display-1 fw-semibold font-monospace" style="color:rgb(200, 200, 200);">Steven Broaddus</h1>
           <h3 class="mb-3" style="color:rgb(200, 200, 200)">Computer Engineer | Student | Developer</h3>
-
-          <!-- social media links -->
+        </div>
+        <!-- social media links -->
+        <div style="z-index: 10;">
           <a href="mailto:steven.broaddus220@gmail.com" id="icon-link"><i class="bi bi-envelope px-3" style="font-size: 2rem;"></i></a>
           <a href="https://github.com/SBroaddus220" id="icon-link"><i class="bi bi-github px-3" style="font-size: 2rem;"></i></a>
           <a href="https://www.linkedin.com/in/steven-broaddus" id="icon-link"><i class="bi bi-linkedin px-3" style="font-size: 2rem;"></i></a>
-
         </div>
       </div>
     </section>
@@ -107,7 +107,7 @@
         <div>
           
           <!-- Image floats at end -->
-          <div class="clearfix mx-auto w-50 mt-4 text-center text-md-start">
+          <div class="clearfix mx-auto w-75 mt-4 text-center text-md-start">
             <img src="assets/images/profile-pic.png" alt="Profile pic" class="rounded-circle float-md-end mb-3 ms-md-3">
           
             <p class="fs-5">
@@ -343,7 +343,7 @@
         <section id="project-cards">
           <div class="row justify-content-center mt-5 mx-auto gx-0 w-85">
             
-            <!-- FEH Robot Project -->
+            <!-- FEH Robot Project --> 
             <div class="card col-md-3 col-12 my-3 mx-3 border-0">
               
               <!-- Carousel -->
