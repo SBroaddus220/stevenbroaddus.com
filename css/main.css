@@ -83,7 +83,7 @@ hr.section-hr {
 /************/
 /* Home / Navigation */
 .header {
-    z-index: 5000;
+    /* z-index: 5000; */
     position: relative;
 }
 
@@ -111,7 +111,7 @@ hr.section-hr {
     z-index: 5;
     height: 100%;
     width: 100%;
-  }
+}
 
 /* Gradient for welcome background */
 @keyframes gradient {
@@ -184,6 +184,11 @@ hr.section-hr {
 
 #project-cards .card-img-top, #project-cards .carousel-item img {
     height: 300px;
+}
+
+.header {
+    z-index: 5000;
+    position: relative;
 }
 
 /************/
