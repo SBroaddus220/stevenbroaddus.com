@@ -422,7 +422,7 @@
                   The simulator used to develop the game acted as a tool to draw shapes in a window, all logic was programmed manually for the game.
                   <br/><br/>
                   This game was designed to be a maze game where the user would drag a block using the mouse through a 2D maze. If the block touched any walls, it would reset the level.
-                  This project concluded in a competition where other peers would vote on which game was most fun, and this game won the "Best Game" award against 10 other honors engineering student groups..
+                  This project concluded in a competition where other peers would vote on which game was most fun, and this game won the "Best Game" award against 10 other honors engineering student groups.
                 </p>
               </div>
               <div class="card-footer text-muted text-end small py-0 my-0" style="bottom:0;">
@@ -433,25 +433,90 @@
             <!-- Personal Website Project --> 
             <div id="personal-website-card" class="card col-lg-3 col-12 my-3 mx-3 border-0 align-items-stretch">
               
-              <!-- Carousel -->
-              <div id="personal-website-carousel" class="carousel slide card-img-top" data-bs-ride="carousel" style="border-radius: 4px 4px 0px 0px !important; overflow: hidden;">
-                <div class="carousel-inner h-100">
-                  <div class="carousel-item active h-100">
-                    <object id="website-mirror" type="text/html" data="http://stevenbroaddus.com/" class="h-100 w-100" alt="Mirror of website" style="min-height: 101%; min-width: 105%;">
-                    </object>
-                  </div>
-                </div>
+              <!-- Card top image -->
+              <div id="personal-website" class="card-img-top" style="border-radius: 4px 4px 0px 0px !important; overflow: hidden;">
+                
+                    <section id="home-mirror" class="h-100">
+
+                      <!-- navbar -->
+                      <nav id="main-nav-mirror" class="navbar navbar-collapse w-100 bg-transparent" style="z-index: 1;">
+                        <div class="container-fluid border-3">
+
+                          <!-- name navbar item (leads to home) -->
+                          <a class="navbar-brand fw-semibold fs-5" href="#home">Steven Broaddus</a>
+
+                          <!-- toggler button -->
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav-content-mirror" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+
+                          <div class="collapse navbar-collapse justify-content-end" id="main-nav-content-mirror">
+                            <ul class="navbar-nav">
+
+                              <!-- home navbar item -->
+                              <li class="nav-item">
+                                <a class="nav-link fw-semibold px-3 fs-6" href="#home" id="navlink">Home</a>
+                              </li>
+
+                              <!-- about navbar item -->
+                              <li class="nav-item">
+                                <a class="nav-link fw-semibold px-3 fs-6" href="#about" id="navlink">About</a>
+                              </li>
+
+                              <!-- education navbar item -->
+                              <li class="nav-item">
+                                <a class="nav-link fw-semibold px-3 fs-6" href="#education" id="navlink">Education</a>
+                              </li>
+
+                              <!-- experience navbar item -->
+                              <li class="nav-item">
+                                <a class="nav-link fw-semibold px-3 fs-6" href="#experience" id="navlink">Experience</a>
+                              </li>
+
+                              <!-- projects navbar item -->
+                              <li class="nav-item">
+                                <a class="nav-link fw-semibold px-3 fs-6" href="#projects" id="navlink">Projects</a>
+                              </li>
+
+                              <!-- contact navbar item -->
+                              <li class="nav-item">
+                                <a class="nav-link fw-semibold px-3 fs-6" href="#contact" id="navlink">Contact</a>
+                              </li>
+
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+
+                      <!-- Particle.js background -->
+                      <div id="particles-js-mirror"></div>
+                
+                      <!-- welcome section content -->
+                      <div class="container-fluid d-flex flex-column p-0 h-100 w-100 align-items-center justify-content-center" id="home-content-mirror">
+                        <!-- name and brief introduction -->
+                        <div>
+                          <h1 class="fw-semibold font-monospace" style="color:rgb(200, 200, 200);">Steven Broaddus</h1>
+                          <h3 class="mb-3 fs-6" style="color:rgb(200, 200, 200)">Computer Engineer | Student | Developer</h3>
+                        </div>
+                        <!-- social media links -->
+                        <div style="z-index: 10;">
+                          <a href="mailto:steven.broaddus220@gmail.com" id="icon-link"><i class="bi bi-envelope px-3" style="font-size: 2rem;"></i></a>
+                          <a href="https://github.com/SBroaddus220" id="icon-link"><i class="bi bi-github px-3" style="font-size: 2rem;"></i></a>
+                          <a href="https://www.linkedin.com/in/steven-broaddus" id="icon-link"><i class="bi bi-linkedin px-3" style="font-size: 2rem;"></i></a>
+                        </div>
+                      </div>
+                    </section>
+
               </div>
 
               <div class="card-body">
                 <h5 class="card-title">Personal Website</h5>
                 <p class="card-text">
                   <hr class="mb-3">
-                  Developed a video game in C++ using Ohio State's Proteus microcontroller simulator in a group with one other computer engineer. 
-                  The simulator used to develop the game acted as a tool to draw shapes in a window, all logic was programmed manually for the game.
+                  Designed and developed a personal website that reflects my skills and attributes. This website was created from scratch using pure HTML, CSS, and JavaScript with Bootstrap 5 as a framework.
                   <br/><br/>
-                  This game was designed to be a maze game where the user would drag a block using the mouse through a 2D maze. If the block touched any walls, it would reset the level.
-                  This project concluded in a competition where other peers would vote on which game was most fun, and this game won the "Best Game" award against 10 other honors engineering student groups.
+                  By not basing this website off of a template, many of the challenges that hindered development are approached in a unique and creative way that required me to problem solve. 
+                  Please feel free to look over the code for this website to see how the structure is designed and implemented.
                 </p>
               </div>
               <div class="card-footer text-muted text-end small py-0 my-0" style="bottom:0;">
@@ -528,6 +593,7 @@
     <!-- Particle.js Background -->
     <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
     <script src="./js/particlesbg.js"></script>
+    <script src="./js/particlesbg-mirror.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   </body>

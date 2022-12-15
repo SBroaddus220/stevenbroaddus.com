@@ -186,9 +186,36 @@ hr.section-hr {
     height: 300px;
 }
 
-.header {
-    z-index: 5000;
+/* Personal Website project card top, website mirror */
+#home-mirror { /* welcome banner */
+    background: linear-gradient(-45deg, #252425,#7b7a8a, #3e4450, #34425a);
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-attachment: fixed;
+    text-align: center;
+    z-index: 0;
+    vertical-align: middle;
+    animation: gradient 10s ease infinite;
     position: relative;
+}
+
+#home-content-mirror {
+    position: relative;
+    padding-bottom: 20% !important;
+}
+
+/* Particle background */
+#particles-js-mirror {
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+}
+
+#main-nav-mirror {
+    top: 0;
 }
 
 /************/
