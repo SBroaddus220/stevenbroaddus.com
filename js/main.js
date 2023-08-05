@@ -122,11 +122,16 @@ targetLoc.innerHTML += json2html.render(courseworkArray, template);
 /*
 * Coursework Array
 *
-* 
-* 
+* This array contains all of the coursework that will be displayed on the page.
 */
 let courseworkArray = [
     // NOTE: REMEMBER THAT MONTHS ARE 0-11
+
+    /*
+        Undergraduate Career
+    */
+
+    /* Autumn 2021 */
     {
         "title": "Fundamentals of Engineering for Honors I",
         "courseNumber": "ENGR 1282.01H",
@@ -154,6 +159,8 @@ let courseworkArray = [
         "grade": "A",
         "color": "#0d6efd"
     },
+
+    /* Spring 2022 */
     {
         "title": "Software I: Software Components",
         "courseNumber": "CSE 2221",
@@ -190,13 +197,15 @@ let courseworkArray = [
         "grade": "A",
         "color": "#0d6efd"
     },
+
+    /* Autumn 2022 */
     {
         "title": "Software 2: Software Dev. and Design",
         "courseNumber": "CSE 2231",
         "creditNum": 4,
         "startDate": new Date(2022, 7),
-        "endDate": new Date(),
-        "grade": "IP",
+        "endDate": new Date(2022, 11),
+        "grade": "A",
         "color": "#0d6efd"
     },
     {
@@ -204,8 +213,8 @@ let courseworkArray = [
         "courseNumber": "CSE 2321",
         "creditNum": 3,
         "startDate": new Date(2022, 7),
-        "endDate": new Date(),
-        "grade": "IP",
+        "endDate": new Date(2022, 11),
+        "grade": "A",
         "color": "#0d6efd"
     },
     {
@@ -213,8 +222,8 @@ let courseworkArray = [
         "courseNumber": "MATH 3470",
         "creditNum": 3,
         "startDate": new Date(2022, 7),
-        "endDate": new Date(),
-        "grade": "IP",
+        "endDate": new Date(2022, 11),
+        "grade": "A",
         "color": "#0d6efd"
     },
     {
@@ -222,8 +231,8 @@ let courseworkArray = [
         "courseNumber": "ECE 2060",
         "creditNum": 3,
         "startDate": new Date(2022, 7),
-        "endDate": new Date(),
-        "grade": "IP",
+        "endDate": new Date(2022, 11),
+        "grade": "A",
         "color": "#0d6efd"
     },
     {
@@ -231,8 +240,112 @@ let courseworkArray = [
         "courseNumber": "MATH 2568",
         "creditNum": 3,
         "startDate": new Date(2022, 7),
-        "endDate": new Date(),
+        "endDate": new Date(2022, 11),
+        "grade": "A-",
+        "color": "#0d6efd"
+    },
+
+    /* Spring 2023 */
+    {
+        "title": "Foundations 2: Data Structures and Algorithms",
+        "courseNumber": "CSE 2331",
+        "creditNum": 3,
+        "startDate": new Date(2023, 0),
+        "endDate": new Date(2023, 4),
+        "grade": "A",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Systems 1: Intro to Low-Level Programming and Computer Organization",
+        "courseNumber": "CSE 2421",
+        "creditNum": 4,
+        "startDate": new Date(2023, 0),
+        "endDate": new Date(2023, 4),
+        "grade": "A",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Social, Ethical, and Professional Issues in Computing",
+        "courseNumber": "CSE 2501",
+        "creditNum": 1,
+        "startDate": new Date(2023, 0),
+        "endDate": new Date(2023, 4),
+        "grade": "A",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Intro to Database Systems",
+        "courseNumber": "CSE 3241",
+        "creditNum": 3,
+        "startDate": new Date(2023, 0),
+        "endDate": new Date(2023, 4),
+        "grade": "A",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Intro to Circuit Analysis and Embedded Design",
+        "courseNumber": "ECE 2360",
+        "creditNum": 3,
+        "startDate": new Date(2023, 0),
+        "endDate": new Date(2023, 4),
+        "grade": "A",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Foundations of Higher Mathematics",
+        "courseNumber": "MATH 3345",
+        "creditNum": 3,
+        "startDate": new Date(2023, 0),
+        "endDate": new Date(2023, 4),
+        "grade": "A-",
+        "color": "#0d6efd"
+    },
+
+    /* Autumn 2023 */
+    {
+        "title": "Systems 2: Intro to Operating Systems",
+        "courseNumber": "CSE 2431",
+        "creditNum": 3,
+        "startDate": new Date(2023, 7),
+        "endDate": new Date(2023, 11),
         "grade": "IP",
         "color": "#0d6efd"
-    }
+    },
+    {
+        "title": "Intro to Artificial Intelligence",
+        "courseNumber": "CSE 3521",
+        "creditNum": 3,
+        "startDate": new Date(2023, 7),
+        "endDate": new Date(2023, 11),
+        "grade": "IP",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Project: Design, Development, and Documentation of Web Applications",
+        "courseNumber": "CSE 3901",
+        "creditNum": 4,
+        "startDate": new Date(2023, 7),
+        "endDate": new Date(2023, 11),
+        "grade": "IP",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Intro to Environmental Science",
+        "courseNumber": "ENR 2100",
+        "creditNum": 3,
+        "startDate": new Date(2023, 7),
+        "endDate": new Date(2023, 11),
+        "grade": "IP",
+        "color": "#0d6efd"
+    },
+    {
+        "title": "Intro Skydiving",
+        "courseNumber": "KNSFHP 1139.14",
+        "creditNum": 1,
+        "startDate": new Date(2023, 7),
+        "endDate": new Date(2023, 9),
+        "grade": "IP",
+        "color": "#0d6efd"
+    },
+
 ];
