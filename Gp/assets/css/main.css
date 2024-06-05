@@ -30,6 +30,9 @@
   /* Accent Color - This is the main accent color. It's used for buttons, links, and other elements that need to stand out. */
   --accent-color: #ffc451;
 
+  /* Cute color :) */
+  --cute-color: #dca3a5;
+
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
   --contrast-color: #312f2f;
 }
@@ -398,44 +401,15 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.hero .icon-box {
-  padding: 30px 20px;
-  transition: ease-in-out 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero .icon-box i {
-  font-size: 32px;
-  line-height: 1;
-  color: var(--accent-color);
-}
-
-.hero .icon-box h3 {
-  font-weight: 700;
-  margin: 10px 0 0 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 20px;
-  line-height: 26px;
-}
-
-.hero .icon-box h3 a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: ease-in-out 0.3s;
-}
-
-.hero .icon-box:hover {
-  border-color: var(--accent-color);
-}
-
-.hero .icon-box:hover h3 a {
-  color: var(--accent-color);
+.image-attribution {
+  position: absolute;
+  right: 10px;   /* Adjust position to the bottom-right */
+  bottom: 10px;  /* Adjust position to the bottom-right */
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  z-index: 4;    /* Make sure the text is above all other content */
+  font-size: 12px;
+  font-family: Arial, sans-serif; /* Use a clean and simple font */
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
 }
 
 @media (max-width: 768px) {
@@ -449,49 +423,11 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Features Section
---------------------------------------------------------------*/
-.features .features-image {
-  position: relative;
-  min-height: 400px;
-}
-
-.features .features-image img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.features .features-item h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 5px 0;
-}
-
-.features .features-item i {
-  font-size: 48px;
-  color: var(--accent-color);
-  margin-right: 20px;
-  line-height: 0;
-}
-
-.features .features-item p {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0;
-}
-
-
-/*--------------------------------------------------------------
 # Main List Section
 --------------------------------------------------------------*/
 .main-list-ol {
   list-style-type: decimal; /* Ensures numbers are shown */
-  padding-left: 40px;       /* Adjust if necessary to make sure numbers appear inside the container */
+  padding: 0px 10px;       /* Adjust if necessary to make sure numbers appear inside the container */
   margin-left: 0;
   width: 100%;              /* Ensures the container is wide enough */
 }
@@ -502,7 +438,6 @@ section,
 
 .main-list-ol .main-list-item {
   width: 100%;  /* Ensure list items use full width of the container */
-
   display: flex;
   flex-direction: row;  /* Aligns number and content horizontally */
   align-items: center;  /* Centers items horizontally in the flex container */
@@ -528,7 +463,7 @@ section,
   font-weight: bold;
   margin-right: 10px; /* Space between number and text */
   font-size: 25px;
-  color: var(--accent-color);
+  color: var(--cute-color);
 }
 
 .nested-list {
@@ -536,7 +471,17 @@ section,
 }
 
 
+/* Style for Image Items */
+.main-list-ol .image-item {
+  justify-content: center; /* Center image in the container */
+  text-align: center;
+}
 
+.main-list-ol .image-item img {
+  max-width: 100%; /* Responsive image sizing */
+  max-height: 300px; /* Limit image height */
+  margin: 20px 0; /* Space above and below the image */
+}
 
 
 
