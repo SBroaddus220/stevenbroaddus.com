@@ -485,6 +485,62 @@ section,
   margin: 0;
 }
 
+
+/*--------------------------------------------------------------
+# Main List Section
+--------------------------------------------------------------*/
+.main-list-ol {
+  list-style-type: decimal; /* Ensures numbers are shown */
+  padding-left: 40px;       /* Adjust if necessary to make sure numbers appear inside the container */
+  margin-left: 0;
+  width: 100%;              /* Ensures the container is wide enough */
+}
+
+.container {
+  width: 100%;  /* Ensure the container is not too narrow */
+}
+
+.main-list-ol .main-list-item {
+  width: 100%;  /* Ensure list items use full width of the container */
+
+  display: flex;
+  flex-direction: row;  /* Aligns number and content horizontally */
+  align-items: center;  /* Centers items horizontally in the flex container */
+  text-align: left;
+  justify-content: center; /* Centers items vertically in the flex container */
+  margin-top: 20px;        /* Adds space between items */
+
+}
+
+.main-list-ol .main-list-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0; /* Adds space above and below the heading */
+}
+
+.main-list-ol .main-list-item p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+}
+
+.main-list-ol .main-list-item .item-number {
+  font-weight: bold;
+  margin-right: 10px; /* Space between number and text */
+  font-size: 25px;
+  color: var(--accent-color);
+}
+
+.nested-list {
+  list-style-type: lower-alpha; /* Nested list with lowercase letters */
+}
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
