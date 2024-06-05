@@ -138,6 +138,7 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
+
 }
 
 /* Index Page Header
@@ -215,7 +216,8 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
+  background-color: var(--cute-color);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -396,7 +398,7 @@ section,
 }
 
 .hero p {
-  margin: 10px 0 0 0;
+  margin: 10px 0 80px 0;
   font-size: 24px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
@@ -448,13 +450,13 @@ section,
 }
 
 .main-list-ol .main-list-item h4 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   margin: 10px 0; /* Adds space above and below the heading */
 }
 
 .main-list-ol .main-list-item p {
-  font-size: 15px;
+  font-size: 20px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
@@ -462,12 +464,28 @@ section,
 .main-list-ol .main-list-item .item-number {
   font-weight: bold;
   margin-right: 10px; /* Space between number and text */
-  font-size: 25px;
+  font-size: 35px;
   color: var(--cute-color);
 }
 
 .nested-list {
   list-style-type: lower-alpha; /* Nested list with lowercase letters */
+}
+
+@media (max-width: 768px) {
+  .main-list-ol .main-list-item h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0; /* Adds space above and below the heading */
+  }
+
+  .main-list-ol .main-list-item p {
+    font-size: 15px;
+  }
+  
+  .main-list-ol .main-list-item .item-number {
+    font-size: 25px;
+  }
 }
 
 
@@ -482,7 +500,6 @@ section,
   max-height: 300px; /* Limit image height */
   margin: 20px 0; /* Space above and below the image */
 }
-
 
 
 
