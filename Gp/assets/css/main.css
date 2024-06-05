@@ -1,9 +1,8 @@
 /**
-* Template Name: Gp
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Updated: Jun 02 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Last updated: June 4th, 2024 with Bootstrap v5.3.3
+* Based off of template: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+* Author: Steven Broaddus
+* License: https://bootstrapmade.com/license/ with free version
 */
 
 /*--------------------------------------------------------------
@@ -28,7 +27,7 @@
   /* Heading Color - This color is used for titles, headings and secondary elements. */
   --heading-color: #151515;
 
-  /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
+  /* Accent Color - This is the main accent color. It's used for buttons, links, and other elements that need to stand out. */
   --accent-color: #ffc451;
 
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
@@ -393,10 +392,6 @@ section,
   font-family: var(--nav-font);
 }
 
-.hero h2 span {
-  color: var(--accent-color);
-}
-
 .hero p {
   margin: 10px 0 0 0;
   font-size: 24px;
@@ -451,39 +446,6 @@ section,
   .hero p {
     font-size: 18px;
   }
-}
-
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .content h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-.about .content .fst-italic {
-  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
-}
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  padding: 10px 0 0 0;
-  display: flex;
-}
-
-.about .content ul i {
-  color: var(--accent-color);
-  margin-right: 0.5rem;
-  line-height: 1.2;
-  font-size: 1.25rem;
-}
-
-.about .content p:last-child {
-  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
