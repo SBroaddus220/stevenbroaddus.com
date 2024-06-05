@@ -494,6 +494,8 @@ section,
   --default-color: #ffffff;
   --contrast-color: #ffffff;
   padding: 80px 0;
+  height: 75vh; 
+  min-height: 500px;
   position: relative;
   clip-path: inset(0);
 }
@@ -515,4 +517,49 @@ section,
   position: absolute;
   inset: 0;
   z-index: 2;
+}
+
+/* Styles for Text Overlay */
+.cta-content {
+  position: absolute;
+  top: 50%;  /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the positioning to the exact center */
+  text-align: center; /* Center the text within the div */
+  color: var(--default-color); /* Set text color */
+  z-index: 3; /* Ensure the text is above the image and overlay */
+  padding: 40px; /* Increased padding to expand the container */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a semi-transparent background to enhance text readability */
+  border-radius: 10px; /* Optional: adds rounded corners for aesthetic appeal */
+  max-width: 80%; /* Adjusted width to allow more of the image to show */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+
+}
+
+.cta-content h2 {
+  font-size: 2.5vw; /* Adjust font size based on viewport width */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between the heading and paragraph */
+  color: var(--default-color);
+}
+
+.cta-content p {
+  font-size: 2vw; /* Smaller font size for paragraph */
+  max-width: 80%; /* Limits the width of the paragraph text within the container */
+  margin: auto; /* Helps in centering the text if max-width is used */
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    min-height: 300px; /* Adjust for smaller devices */
+  }
+
+  .cta-content h2 {
+    font-size: 6vw; /* Increase font size slightly for smaller devices */
+  }
+
+  .cta-content p {
+    font-size: 5vw; /* Increase font size slightly for smaller devices */
+  }
 }
