@@ -231,7 +231,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--cute-color), transparent 20%);
   color: var(--contrast-color);
 }
 
@@ -518,10 +518,17 @@ section,
 
 .main-list-ol .image-item img {
   max-width: 100%; /* Responsive image sizing */
-  max-height: 300px; /* Limit image height */
+  max-height: 600px; /* Limit image height */
   margin: 20px 0; /* Space above and below the image */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Adds a subtle shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+
 }
 
+/* Hover effect to increase shadow */
+.main-list-ol .image-item img:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* Darker shadow on hover */
+}
 
 
 /*--------------------------------------------------------------
