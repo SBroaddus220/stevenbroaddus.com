@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rose Plot</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+        background-color: #1e1e1e; /* Dark background */
+        color: #d4d4d4; /* Light grey text */
+    }
+    nav {
+        background-color: #333;
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    #plotly-plot {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+    .code-container {
+        background-color: #1e1e1e;
+        color: #d4d4d4;
+        margin: 100px;
+        border-radius: 8px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5); /* Soft drop shadow */
+        overflow: hidden;
+    }
+    .code-header {
+        background-color: #21252b;
+        padding: 8px 20px;
+        color: #9da5b4;
+        font-size: 16px;
+        border-bottom: 1px solid #181a1f;
+    }
+    .code-block {
+        padding: 0px 10px;
+        overflow-x: auto;
+    }
+    footer {
+        height: 50px;
+        background-color: #2b2b2b;
+    }
+    @media (max-width: 768px) {
+        .code-container {
+            margin: 20px; /* Smaller margin for smaller devices */
+        }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="rose.html">Rose</a>
+    <a href="rose-bouquet.html">Rose Bouquet</a>
+    <a href="rose-head.html">Rose Head</a>
+</nav>
+
+<div id="plotly-plot">
+    <!-- Plotly graph will be inserted here -->
+</div>
+
+<div class="code-container">
+    <div class="code-header">Python Code</div>
+    <div class="code-block">
+        <pre><code class="language-python">
+import plotly.graph_objects as go
+
+fig = go.Figure()
+
+# Add your traces here (e.g., roses, stems, wrap)
+
+# Update layout for background color and camera settings
+fig.update_layout(
+    title='3D Rose Bouquet with Artistic Bouquet Wrap',
+    autosize=True,
+    scene=dict(
+        xaxis=dict(visible=False),
+        yaxis=dict(visible=False),
+        zaxis=dict(visible=False),
+        camera=dict(
+            eye=dict(x=2.5, y=-2.5, z=2.5),
+            up=dict(x=0, y=0, z=1),
+            center=dict(x=0, y=0, z=0)
+        )
+    ),
+    paper_bgcolor='black',
+    plot_bgcolor='black',
+    margin=dict(l=0, r=0, b=0, t=30)
+)
+
+fig.show()
+        </code></pre>
+    </div>
+</div>
+
+<footer></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>
