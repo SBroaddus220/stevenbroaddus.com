@@ -17,11 +17,17 @@ def create_rose(fig, x_offset=0, y_offset=0, z_offset=0, angle_x=0, angle_y=0, a
     fig.add_trace(go.Surface(x=X, y=Y, z=Z, colorscale='Reds', showscale=False))
 
 
-def get_stem_top_center(height, x_offset, y_offset, curve_factor=0.2):
+def get_stem_top_center(height, x_offset, y_offset, curve_factor=0.2, angle_x=0, angle_y=0, angle_z=0):
+    # Initial top center calculation without rotation
     z_top = height
     x_top = curve_factor * np.sin(np.pi * z_top / height) + x_offset
     y_top = curve_factor * np.cos(np.pi * z_top / height) + y_offset
-    return x_top, y_top, z_top
+    z_top += 0  # No offset needed as z_top is already height
+
+    # Apply rotation transformations
+    x_top, y_top, z_top = rotate_xyz(np.array([x_top]), np.array([y_top]), np.array([z_top]), angle_x, angle_y, angle_z)
+
+    return x_top[0], y_top[0], z_top[0]
 
 def rotate_xyz(X, Y, Z, angle_x=0, angle_y=0, angle_z=0):
     # Rotation around the x-axis
@@ -92,6 +98,30 @@ def plot_roses_and_stems(stem_specs):
                       margin=dict(l=0, r=0, b=0, t=30))
     fig.show()
 
+    
+def create_asymmetrical_wrap(fig, base_radius=0.05, top_radius=0.8, height=1.2, x_offset=0, y_offset=0, z_offset=0, color='tan'):
+    # Define the angular coordinates
+    theta = np.linspace(0, 2 * np.pi, 60)  # More divisions for a smoother surface
+    z = np.linspace(0, height, 20)  # More divisions along the height for a smoother gradient
+    theta, z = np.meshgrid(theta, z)
+
+    # Adjust top radius dynamically to create more open wrap
+    top_radii = top_radius + 0.4 * np.sin(3 * theta[0, :])  # Creating waves in the top radius for more open effect
+
+    # Introduce more pronounced height variations for artistic effect
+    height_variation = 0.4 * np.sin(2 * theta[0, :])  # Some points are higher than others
+
+    # Calculate radial coordinates
+    r = np.linspace(base_radius, 1, z.shape[0])[:, None] * top_radii  # Scale the radius from base to top
+
+    # Adjust the z coordinates based on the height variations and z_offset
+    z = z + height_variation + z_offset  # Add the z_offset here for proper vertical positioning
+
+    x = r * np.cos(theta) + x_offset
+    y = r * np.sin(theta) + y_offset
+
+    fig.add_trace(go.Surface(x=x, y=y, z=z, opacity=0.9, colorscale=[[0, color], [1, color]], showscale=False))
+
 
 def plot_combined():
     fig = go.Figure()
@@ -99,7 +129,7 @@ def plot_combined():
     # Central rose with no slant
     create_stem(fig, height=3, radius=0.05, x_offset=0, y_offset=0, z_offset=0)
     x_top, y_top, z_top = get_stem_top_center(3, 0, 0)
-    create_rose(fig, x_top, y_top, z_top + 0.5)
+    create_rose(fig, x_top, y_top, z_top - 0.4)
 
     # Parameters for surrounding roses
     num_around = 5
@@ -109,31 +139,29 @@ def plot_combined():
     angles = np.linspace(0, 4 * np.pi, num_around, endpoint=False)  # Generate angles for a pentagon
 
     for i, angle in enumerate(angles):
-        # Calculate top positions based on the pentagon radius
-        x_top = central_point[0] + np.cos(angle) * radius
-        y_top = central_point[1] + np.sin(angle) * radius
-        z_top = central_point[2] + base_height
-
         # Adjust slant angles for the stem
-        # Slightly reduce the angle from vertical to make the stem meet the top position more vertically
         distance = np.sqrt(radius**2 + base_height**2)  # Distance from base to rose top
         theta = np.arctan(radius / (base_height + 0.4))  # Reduce the effective height slightly for less slant
-
-        # Rotate around the z-axis to orient the stem towards its final position
         angle_z = angle - np.pi / 2  # Adjust so that stems radiate outward
 
         # Create stems that originate from the same point but bend towards the top positions
         create_stem(fig, height=distance, radius=0.05, x_offset=central_point[0], y_offset=central_point[1], z_offset=central_point[2],
                     angle_x=theta, angle_y=0, angle_z=angle_z)
 
+        # Calculate exact top center based on the rotation and position
+        x_top, y_top, z_top = get_stem_top_center(distance, central_point[0], central_point[1], angle_x=theta, angle_y=0, angle_z=angle_z)
+
         # Attach roses at the calculated top positions
-        create_rose(fig, x_offset=x_top, y_offset=y_top, z_offset=z_top)
+        create_rose(fig, x_offset=x_top, y_offset=y_top, z_offset=z_top-0.4)
 
     # Additional independent rose heads on the floor
-    create_rose(fig, x_offset=-1.5, y_offset=-1.5, z_offset=0)  # First independent rose on the floor
-    create_rose(fig, x_offset=1.5, y_offset=-1.5, z_offset=0)  # Second independent rose on the floor
+    # create_rose(fig, x_offset=-1.5, y_offset=-1.5, z_offset=0)  # First independent rose on the floor
+    # create_rose(fig, x_offset=1.5, y_offset=-1.5, z_offset=0)  # Second independent rose on the floor
 
-    fig.update_layout(title='3D Rose Bouquet with Full Circular Arrangement', autosize=True,
+    # Create an asymmetrical, artistic wrap around the bouquet
+    create_asymmetrical_wrap(fig, base_radius=0.2, top_radius=2.25, height=2.5, x_offset=0, y_offset=0, z_offset=1, color='pink')  # Adjust z_offset as needed
+
+    fig.update_layout(title='3D Rose Bouquet with Artistic Bouquet Wrap', autosize=True,
                       scene=dict(xaxis=dict(visible=False),
                                  yaxis=dict(visible=False),
                                  zaxis=dict(visible=False)),
