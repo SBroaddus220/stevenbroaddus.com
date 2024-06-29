@@ -207,9 +207,18 @@ def create_stem(fig: go.Figure, height: float = 1, radius: float = 0.05, x_offse
         fig.add_trace(go.Scatter3d(x=x_thorn, y=y_thorn, z=z_thorn, mode='lines', line=dict(color='Green', width=4)))
 
 
-def plot_single_rose():
+def plot_single_rose() -> str:
     """
-    Creates a 3D visualization of a single rose with a stem and exports the HTML to a file.
+    Generates an HTML string for a 3D visualization of a single rose with its stem.
+    
+    This function creates a Plotly figure to model a single rose complete with its stem.
+    The stem is modeled first, followed by the rose positioned at the calculated top center of the stem.
+    The layout is specifically tailored to enhance the 3D effect and focus on the rose. The camera,
+    background color, and visibility settings are adjusted to optimize the viewer's experience.
+    The generated HTML includes the necessary Plotly JavaScript from CDN, enabling direct embedding into web pages.
+    
+    Returns:
+        str: HTML string for embedding the 3D plot, which includes CDN links to Plotly's JavaScript resources.
     """
     fig = go.Figure()  # Initialize the Plotly figure
 
