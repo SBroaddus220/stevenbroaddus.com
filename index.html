@@ -151,7 +151,7 @@
                 </ul>
               </li>
               <li class="my-1">
-                Electricity ⚡ (It's like magic)
+                Electricity ⚡ (It's actually magic)
               </li>
               <li class="my-1">
                 Decentralized Computing
@@ -527,6 +527,61 @@
         <!-- Project cards -->
         <section id="project-cards">
           <div class="row justify-content-center mt-5 mx-auto gx-0 w-85">
+
+
+            <!-- Visual Prompt-Metric Alignment --> 
+            <div class="card col-lg-3 col-12 my-3 mx-3 border-0 d-flex align-items-stretch">
+              
+              <!-- Carousel -->
+              <div id="visual-prompt-metric-carousel" class="carousel slide card-img-top" data-bs-ride="carousel" style="border-radius: 4px 4px 0px 0px !important; overflow: hidden;">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./assets/images/Projects/Visual Metric Prompt Relation Analysis/pipeline_diagram.png" class="d-block w-100" alt="(Un)supervised Model Pipeline Diagram">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Visual Metric Prompt Relation Analysis/better_umap_embedding.png" class="d-block w-100" alt="UMAP Embedding">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Visual Metric Prompt Relation Analysis/correlation_matrix.png" class="d-block w-100" alt="Correlation Matrix">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Visual Metric Prompt Relation Analysis/wordcloud.png" class="d-block w-100" alt="Result Wordcloud">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Visual Metric Prompt Relation Analysis/adjective_vs_complexity.png" class="d-block w-100" alt="Adjective vs. Complexity">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Visual Metric Prompt Relation Analysis/mse_scatter_by_model.png" class="d-block w-100" alt="MSE scatterplot by model">
+                </div>
+                <button id="visual-prompt-metric-carousel-controls" class="carousel-control-prev" type="button" data-bs-target="#visual-prompt-metric-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button id="visual-prompt-metric-carousel-controls" class="carousel-control-next" type="button" data-bs-target="#visual-prompt-metric-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">Visual Prompt-Metric Alignment</h5>
+                <p class="card-text">
+                  <hr class="mb-3">
+                  This project (see <a href="assets/files/visual_prompt_metric_project_report.pdf">project report</a> and <a href="https://github.com/SBroaddus220/visual_metric_prompt_relation_analysis">repo</a>) investigated the relationship between
+                  image quality metrics from the <a href="https://github.com/chaofengc/IQA-PyTorch">PyTorch Toolbox for Image Quality Assessment</a> and prompts used to generate AI images.
+                  This included unsupervised and supervised training pipelines for classical and deep-learning models, with different approaches for 
+                  featurizing the text including embeddings via BERT/KeyBERT with vectorization via TF-IDF.
+                  <br/><br/>
+                  The goal behind this was to establish an understanding of how perceived quality can be enhanced through the manipulation of prompts. This pipeline 
+                  can also be established for non-AI generated images via related text and tags to enhance the search for novel and high-quality media.
+
+                </p>
+              </div>
+              <div class="card-footer text-muted text-end small py-0 my-0" style="bottom:0;">
+                <p class="py-0 my-0">1/2025 - 5/2025</p>
+              </div>
+            </div>
 
             <!-- Homelab Project --> 
             <div class="card col-lg-3 col-12 my-3 mx-3 border-0 d-flex align-items-stretch">
