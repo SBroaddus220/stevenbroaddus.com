@@ -531,6 +531,52 @@
         <section id="project-cards">
           <div class="row justify-content-center mt-5 mx-auto gx-0 w-85">
 
+            <!-- Neural-Navigator --> 
+            <div class="card col-lg-3 col-12 my-3 mx-3 border-0 d-flex align-items-stretch">
+              
+              <!-- Carousel -->
+              <div id="neural-navigator-carousel" class="carousel slide card-img-top" data-bs-ride="carousel" style="border-radius: 4px 4px 0px 0px !important; overflow: hidden;">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./assets/images/Projects/Neural-Navigator/car_percept.png" class="d-block w-100" alt="Perception vectors of car ML-Agent">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Neural-Navigator/figure_8_perspective_view.png" class="d-block w-100" alt="Figure 8 track perspective view during training.">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Neural-Navigator/cumulative_reward_hist.png" class="d-block w-100" alt="Cumulative reward histogram during training.">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/images/Projects/Neural-Navigator/variety_scene_topdown_view.png" class="d-block w-100" alt="Different courses being navigated by model from a top-down view.">
+                </div>
+                <button id="neural-navigator-carousel-controls" class="carousel-control-prev" type="button" data-bs-target="#neural-navigator-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button id="neural-navigator-carousel-controls" class="carousel-control-next" type="button" data-bs-target="#neural-navigator-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">Neural-Navigator</h5>
+                <p class="card-text">
+                  <hr class="mb-3">
+                  This project (see the <a href="assets/files/neural-navigator_report.pdf">project report</a>, <a href="https://github.com/SBroaddus220/Neural-Navigator">repo</a>, and <a href="https://www.youtube.com/watch?v=_DPcW77_ipA">demo video</a>) 
+                  focused on the development of a Reinforcement Learning (RL) agent using <a href="https://github.com/Unity-Technologies/ml-agents">Unity's ML-Agents Toolkit</a> to drive a 3D car with realistic physics through a variety of tracks.
+                  <br/><br/>
+                  This goal of this project was to experiment with RL in Unity to better understand how the pipeline works and what is important for inputs and improved performance. 
+                  Curriculum training was also explored to improve the agent's ability to generalize across different tracks.
+                  The agent ended up being able to navigate really well, which was especially impressive given the difficulty of some of the courses (I even struggled).
+                </p>
+              </div>
+              <div class="card-footer text-muted text-end small py-0 my-0" style="bottom:0;">
+                <p class="py-0 my-0">8/2024 - 12/2024</p>
+              </div>
+            </div>
+
 
             <!-- Visual Prompt-Metric Alignment --> 
             <div class="card col-lg-3 col-12 my-3 mx-3 border-0 d-flex align-items-stretch">
@@ -571,7 +617,7 @@
                 <h5 class="card-title">Visual Prompt-Metric Alignment</h5>
                 <p class="card-text">
                   <hr class="mb-3">
-                  This project (see <a href="assets/files/visual_prompt_metric_project_report.pdf">project report</a> and <a href="https://github.com/SBroaddus220/visual_metric_prompt_relation_analysis">repo</a>) investigated the relationship between
+                  This project (see the <a href="assets/files/visual_prompt_metric_project_report.pdf">project report</a> and <a href="https://github.com/SBroaddus220/visual_metric_prompt_relation_analysis">repo</a>) investigated the relationship between
                   image quality metrics from the <a href="https://github.com/chaofengc/IQA-PyTorch">PyTorch Toolbox for Image Quality Assessment</a> and prompts used to generate AI images.
                   This included unsupervised and supervised training pipelines for classical and deep-learning models, with different approaches for 
                   featurizing the text including embeddings via BERT/KeyBERT with vectorization via TF-IDF.
